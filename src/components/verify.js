@@ -4,7 +4,7 @@ import {
   Form,
   TextInput,
   Button,
-  InlineLoading,
+  // InlineLoading,
   ToastNotification,
 } from "carbon-components-react";
 import { ArrowRight32 } from "@carbon/icons-react";
@@ -18,8 +18,6 @@ export const Veriy = (props) => {
   const [showNotification, setShowNotification] = useState(false);
   const history = useHistory();
   const { state, dispatch } = useContext(LoginContext);
-
-  console.log("state", state);
 
   const { verificationCode, email, password } = state;
 
@@ -52,8 +50,8 @@ export const Veriy = (props) => {
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
 
-        // dispatch({ type: "RE_RUN", payload: {} });
-        history.push("/");
+        // history.push("/");
+        window.location.assign("/");
       } else setShowNotification(true);
 
       // go to password route

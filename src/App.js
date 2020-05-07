@@ -1,11 +1,20 @@
 import React from "react";
-import { LoginContainer } from "container/LoginContainer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Authenticated } from "components/authenticated";
+// import { Success } from "components/success";
+
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <LoginContainer />
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Authenticated />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

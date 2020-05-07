@@ -5,7 +5,7 @@ export const Register = (props) => {
     <div className="register">
       <div>Log In</div>
       <div>
-        Dont have an account ? <a href="#">Register Now</a>
+        Don't have an account ? <a href="#">Register Now</a>
       </div>
     </div>
   );

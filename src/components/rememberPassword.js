@@ -1,5 +1,5 @@
 import React from "react";
-import { fieldset, Checkbox } from "carbon-components-react";
+import { Checkbox } from "carbon-components-react";
 
 export const RememberPassword = (props) => {
   return (
