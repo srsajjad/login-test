@@ -16,12 +16,19 @@
 .email,
 .password,
 .verify {
-  height: 57%;
+  height: 29%;
   width: 80%;
 }
 
 .submit {
   width: 100%;
+}
+
+.submit svg {
+  position: absolute;
+  fill: white;
+  transform: scale(0.8);
+  right: 15px;
 }
 
 .form-input {
@@ -61,6 +68,20 @@
 .register div a {
   padding-left: 4px;
   text-decoration: none;
+}
+
+.remember-password {
+  height: 26%;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  line-height: auto;
+}
+
+.remember-password a {
+  padding-top: 0.45rem;
+  text-decoration: none;
+  color: #3974de;
 }
 
 .copyright {

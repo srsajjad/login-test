@@ -11,6 +11,7 @@ import { LoginContext, initialState, loginReducer } from "context/LoginContext";
 import "./LoginContainer.css";
 import { Register } from "components/register";
 import { Copyright } from "components/copyright";
+import { RememberPassword } from "components/rememberPassword";
 
 export const LoginContainer = (props) => {
   const [state, dispatch] = useReducer(loginReducer, initialState);
@@ -36,6 +37,7 @@ export const LoginContainer = (props) => {
         </LoginContext.Provider>
       </Router>
 
+      <RememberPassword />
       <Copyright />
     </div>
   );
