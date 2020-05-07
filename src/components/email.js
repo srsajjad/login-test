@@ -55,7 +55,7 @@ export const Email = (props) => {
                 name="email"
                 className="form-input"
                 labelText="Enter Your Strobes Id"
-                helperText="Email"
+                // helperText="Email"
                 placeholder="john.doe@example.com"
                 value={values.email}
                 invalidText={errors.email}

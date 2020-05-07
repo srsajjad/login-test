@@ -54,7 +54,7 @@ export const Password = (props) => {
   return (
     <div className="password">
       <div
-        style={{ cursor: "pointer" }}
+        className="back-to-email"
         tabIndex={0}
         onClick={() => history.push("/login/email")}
       >
@@ -85,7 +85,7 @@ export const Password = (props) => {
                 name="password"
                 className="form-input"
                 labelText="Enter Your Password"
-                helperText="Password"
+                // helperText="Password"
                 placeholder="******"
                 value={values.password}
                 invalidText={errors.password}
@@ -100,13 +100,10 @@ export const Password = (props) => {
               className="submit"
               disabled={loading}
             >
-              {loading ? (
-                <InlineLoading status="active" description="Loading..." />
-              ) : (
-                <span>
-                  Continue <ArrowRight32 />
-                </span>
-              )}
+              <div>Continue</div>
+              {loading && <div>Loading....</div>}
+
+              <ArrowRight32 />
             </Button>
           </Form>
         )}

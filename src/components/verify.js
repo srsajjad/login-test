@@ -92,7 +92,7 @@ export const Veriy = (props) => {
                 name="verificationCode"
                 className="form-input"
                 labelText="2 Step Verification"
-                helperText="Google Authentication Code"
+                // helperText="Google Authentication Code"
                 placeholder="****"
                 value={values.verificationCode}
                 invalidText={errors.verificationCode}
@@ -108,26 +108,21 @@ export const Veriy = (props) => {
               disabled={loading}
               className="submit"
             >
-              {loading ? (
-                <InlineLoading status="active" description="Loading..." />
-              ) : (
-                <span>
-                  Continue <ArrowRight32 />
-                </span>
-              )}
+              <div>Continue</div>
+              {loading && <div>Loading....</div>}
+              <ArrowRight32 />
             </Button>
 
-            <ToastNotification
-              style={{
-                opacity: showNotification ? 1 : 0,
-                transition: "opacity 0.2s",
-              }}
-              kind="error"
-              title="Incorrect Code"
-              subtitle={<a href="/login/email">Retry</a>}
-              timeout={0}
-              caption="Login Failed"
-            />
+            {showNotification && (
+              <ToastNotification
+                kind="error"
+                title="Incorrect Code"
+                subtitle={<a href="/login/email">Retry</a>}
+                timeout={0}
+                caption="Login Failed"
+                className="noti"
+              />
+            )}
           </Form>
         )}
       </Formik>

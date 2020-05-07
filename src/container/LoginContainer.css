@@ -8,20 +8,35 @@
   justify-content: center;
   align-items: center;
   width: 400px;
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 2;
   background-color: white;
 }
 
 .email,
 .password,
-.verify {
-  height: 29%;
+.verification-code {
+  height: 40%;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx--form {
+  width: 100%;
 }
 
 .submit {
   width: 100%;
+  display: flex;
+}
+
+.submit div {
+  color: white;
+  flex: 1;
 }
 
 .submit svg {
@@ -43,7 +58,7 @@
 
 .register {
   width: 100%;
-  height: 31%;
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +86,7 @@
 }
 
 .remember-password {
-  height: 26%;
+  height: 15%;
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -86,8 +101,32 @@
 
 .copyright {
   width: 80%;
-  height: 12%;
+  height: 15%;
   font-size: 0.7rem;
   display: flex;
   align-items: center;
+  padding-top: 0.5rem;
+}
+
+.back-to-email {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.back-to-email svg {
+  transform: scale(0.7);
+  width: 24px;
+  margin-right: 0.4rem;
+}
+
+.noti {
+  margin-top: 15px;
+  color: black;
+  background: white;
+  height: 70px;
 }
