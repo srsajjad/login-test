@@ -53,6 +53,7 @@ export const Email = (props) => {
               <TextInput
                 id="email"
                 name="email"
+                className="form-input"
                 labelText="Enter Your Strobes Id"
                 helperText="Email"
                 placeholder="john.doe@example.com"
@@ -62,7 +63,7 @@ export const Email = (props) => {
               />
             </div>
 
-            <Button type="submit">
+            <Button className="submit" type="submit">
               Continue <ArrowRight32 />
             </Button>
           </Form>

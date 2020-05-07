@@ -83,6 +83,7 @@ export const Password = (props) => {
               <TextInput.PasswordInput
                 id="password"
                 name="password"
+                className="form-input"
                 labelText="Enter Your Password"
                 helperText="Password"
                 placeholder="******"
@@ -96,6 +97,7 @@ export const Password = (props) => {
             <Button
               style={{ display: "flex", justifyContent: "space-between" }}
               type="submit"
+              className="submit"
               disabled={loading}
             >
               {loading ? (

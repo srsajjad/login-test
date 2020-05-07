@@ -90,6 +90,7 @@ export const Veriy = (props) => {
               <TextInput
                 id="verificationCode"
                 name="verificationCode"
+                className="form-input"
                 labelText="2 Step Verification"
                 helperText="Google Authentication Code"
                 placeholder="****"
@@ -105,6 +106,7 @@ export const Veriy = (props) => {
               style={{ display: "flex", justifyContent: "space-between" }}
               type="submit"
               disabled={loading}
+              className="submit"
             >
               {loading ? (
                 <InlineLoading status="active" description="Loading..." />
